@@ -13,6 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infracciones.ClientServices
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfraccionesMauiApp", "InfraccionesMauiApp\InfraccionesMauiApp.csproj", "{930F6519-C911-4E6F-91A6-8226D4DDD3F3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{9E1FBFF8-5E8B-4A7A-9E1B-DD525BD2DB27}"
+	ProjectSection(SolutionItems) = preProject
+		solucion.jpg = solucion.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
