@@ -7,7 +7,7 @@
 
 <div align="center">
         <img style="width:50%;" src="Infracciones/solucion.jpg"/>
-        <p>Figura 1. Solución /p>
+        <p>Figura 1. Solución </p>
 </div>
 
 
