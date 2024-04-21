@@ -6,7 +6,7 @@
 ## Solución
 
 <div align="center">
-        <img style="width:50%;" src="Infracciones/solucion.jpg"/>
+        <img style="width:50%;" src="Encuestas/solucion.jpg"/>
         <p>Figura 1. Solución </p>
 </div>
 
@@ -17,11 +17,11 @@ Immplementación del botón
 ```csharp
         private async void btnPrueba_Clicked(System.Object sender, System.EventArgs e)
         {
-            InfraccionesService servicio = new InfraccionesService();
-            var infraccion = await servicio.Prueba();
-            if (infraccion != null)
+            EncuestasService servicio = new InfraccionesService();
+            var encuesta = await servicio.Prueba();
+            if (encuesta != null)
             {
-                lbnRespuesta.Text = infraccion.Nombre;
+                lbnRespuesta.Text = encuesta.Nombre;
             }
             else
             {
@@ -34,9 +34,9 @@ Immplementación del botón
 
 La llamada de prueba a la API
 ```csharp
-public async Task<Infraccion> Prueba()
+public async Task<Encuesta> Prueba()
 {
-    string baseUrl = "https://infracciones.somee.com/api/Infraccion/1";
+    string baseUrl = "https://encuesta.somee.com/api/Encuesta/1";
 
     using (HttpClient httpClient = new HttpClient())
     {
@@ -50,9 +50,9 @@ public async Task<Infraccion> Prueba()
             {
                 string dataJson = await response.Content.ReadAsStringAsync();
 
-                var infraccion = JsonConvert.DeserializeObject<Infraccion>(dataJson);
+                var encuesta = JsonConvert.DeserializeObject<Encuesta>(dataJson);
 
-                return infraccion;
+                return encuesta;
             }
         }
         catch (Exception ex)
@@ -65,4 +65,4 @@ public async Task<Infraccion> Prueba()
 ```
 
 ## WebAPI
-<a href="https://infracciones.somee.com/swagger/index.html">swagger</a> 
+<a href="https://encuesta.somee.com/swagger/index.html">swagger</a> 
