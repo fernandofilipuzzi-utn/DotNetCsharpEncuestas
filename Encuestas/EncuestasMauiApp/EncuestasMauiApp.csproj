@@ -48,14 +48,16 @@
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
 	  <ProvisioningType>manual</ProvisioningType>
-	  <CodesignKey>iPhone Developer</CodesignKey>
+	  <CodesignKey>iPhone Distribution</CodesignKey>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->
-
+<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />		
+		
 		<!-- Splash Screen -->
-
+<MauiIcon Include="Resources\Splash\splash.svg" />		
+		
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
@@ -85,15 +87,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Platforms\Android\drawable\" />
 	  <Folder Include="Platforms\Android\Resources\drawable\" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <MauiIcon Include="Resources\AppIcon\appicon.svg" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiSplashScreen Include="Resources\Splash\splash.png" />
-	</ItemGroup>
 
 </Project>
